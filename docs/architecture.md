@@ -14,6 +14,8 @@
    orchestrator emits byte-identical CSS and manifest output.
 6. **AI gets constraints, not taste.** The manifest exposes allowed variants,
    semantics, examples, and violations. It does not invite invented token names.
+7. **Generated UI is data, not code.** Prototype agents exchange strict screen
+   specifications. A trusted renderer turns those specifications into UI.
 
 ## Dependency rules
 
@@ -33,6 +35,20 @@ forbids deep relative imports across package boundaries.
 | 6 | patterns | primitives, recipes |
 | 7 | compositions | patterns, recipes |
 | 8 | orchestrator | all layers |
+| 9 | prototype-agents | accessibility, recipes, patterns, compositions |
+
+## Prototype agent pipeline
+
+```text
+PRD → Discovery Agent → System Planner → Prototype Builder → Accessibility Reviewer
+          requirements       plan          screen spec          checked result
+```
+
+The PRD is treated as untrusted product content. Each agent has one role and a
+bounded output schema. The builder cannot emit HTML, JavaScript, CSS, or URLs;
+it emits a renderer-safe screen specification using approved pattern names and
+component recipes. The server keeps provider credentials private and supports a
+deterministic local implementation for development and tests.
 
 ## Token lifecycle
 
@@ -51,4 +67,3 @@ When adding a component: define or reuse its contract, add headless behavior,
 bind only semantic tokens in its recipe, validate states, compose it into a
 pattern, and regenerate artifacts. New raw values should be rare and justified
 by a semantic need rather than introduced from a mockup one pixel at a time.
-

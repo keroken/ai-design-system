@@ -36,6 +36,31 @@ npm run dev
 Then open <http://localhost:4173>. The generator writes CSS and an AI-readable
 manifest into `apps/demo/public/generated/`.
 
+## Product surfaces
+
+- `/` — concept landing page explaining the AI-optimized architecture.
+- `/catalog/` — user-facing catalog generated from the live design manifest.
+- `/example/` — interactive planning app demonstrating the system in context.
+- `/playground/` — agentic studio that turns PRDs and selected patterns into
+  constrained, accessible prototypes.
+
+All three surfaces share the generated tokens, responsive navigation, theme
+preference, component styling, focus policy, and reduced-motion behavior.
+
+### Prototype agents
+
+The playground works immediately with a deterministic local agent pipeline. To
+use model-backed generation, keep the API key on the server and start the app
+with:
+
+```bash
+OPENAI_API_KEY=your_key npm run dev
+```
+
+Set `OPENAI_MODEL` to override the default `gpt-6-luna` model. The Discovery,
+System Planner, and Prototype Builder agents use schema-constrained outputs;
+the Accessibility Reviewer applies deterministic policy checks to every result.
+
 ## Packages
 
 | Layer | Responsibility | Not responsible for |
@@ -49,5 +74,6 @@ manifest into `apps/demo/public/generated/`.
 | `patterns` | Reusable information structures | Product workflows |
 | `compositions` | Product-ready assemblies | Token generation |
 | `orchestrator` | Validate, resolve, emit, explain | Runtime UI behavior |
+| `prototype-agents` | Turn PRDs and patterns into reviewed screen specs | Arbitrary executable UI |
 
 See [Architecture](docs/architecture.md) and [AI authoring contract](docs/ai-authoring.md).

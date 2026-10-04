@@ -1,25 +1,47 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Design System</title>
-    <link rel="stylesheet" href="/generated/tokens.css">
-    <link rel="stylesheet" href="/styles.css">
-    <script type="module" src="/app.js"></script>
-  </head>
-  <body>
-    <main>
-      <header class="hero">
-        <div><p class="eyebrow">Executable architecture</p><h1>Design rules an AI can read.<br>Interfaces people can trust.</h1></div>
-        <button class="theme" type="button" aria-label="Switch to dark theme">Dark mode</button>
-      </header>
-      <section class="grid" aria-label="System overview">
-        <article class="panel intro"><p class="kicker">Nine layers, one direction</p><h2>From raw values to useful compositions</h2><p>Contracts keep the system legible. Accessibility gates generation. Recipes and patterns keep output coherent without making every interface identical.</p><ol id="layers"></ol></article>
-        <article class="panel demo"><p class="kicker">Live composition</p><h2>Welcome back</h2><p class="muted">Sign in to continue to your workspace.</p><form><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com"><div class="field-head"><label for="password">Password</label><a href="#">Forgot password?</a></div><input id="password" type="password" autocomplete="current-password"><button class="button" type="submit">Sign in</button></form><p class="status" role="status" hidden>Demo form validated locally.</p></article>
-      </section>
-      <section class="metrics" aria-label="Generated system metrics"><div><strong id="token-count">—</strong><span>semantic tokens</span></div><div><strong id="component-count">—</strong><span>component recipes</span></div><div><strong id="check-count">—</strong><span>contrast checks passed</span></div></section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A design system with machine-readable intent, accessible defaults, and composable UI architecture.">
+  <title>Relay — AI-optimized design system</title>
+  <link rel="stylesheet" href="/generated/tokens.css"><link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body data-page="landing">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Relay home"><span class="brand-mark" aria-hidden="true">R</span><span>Relay</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="/catalog/">Catalog</a><a href="/example/">Example app</a><a href="#architecture">Architecture</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button>
+  </header>
+  <main>
+    <section class="landing-hero">
+      <p class="eyebrow"><span class="status-dot"></span> Open design infrastructure</p>
+      <h1>A design system<br>that <em>explains itself.</em></h1>
+      <p class="hero-copy">Relay gives people and AI the same source of truth: semantic decisions, accessible behavior, and reusable interface structures—not just a folder of components.</p>
+      <div class="hero-actions"><a class="button button-primary" href="/catalog/">Explore the catalog <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/example/">Open example app</a></div>
+      <div class="manifest-window" aria-label="Example machine-readable component contract">
+        <div class="window-bar"><span></span><span></span><span></span><p>button.recipe.json</p><strong>Validated</strong></div>
+        <pre><code><span class="line-number">01</span>  <span class="syntax-muted">{</span>
+<span class="line-number">02</span>    <span class="syntax-key">"name"</span>: <span class="syntax-string">"Button"</span>,
+<span class="line-number">03</span>    <span class="syntax-key">"intent"</span>: <span class="syntax-string">"Trigger an action"</span>,
+<span class="line-number">04</span>    <span class="syntax-key">"variants"</span>: <span class="syntax-muted">{</span>
+<span class="line-number">05</span>      <span class="syntax-key">"tone"</span>: [<span class="syntax-string">"primary"</span>, <span class="syntax-string">"neutral"</span>, <span class="syntax-string">"danger"</span>]
+<span class="line-number">06</span>    <span class="syntax-muted">}</span>,
+<span class="line-number">07</span>    <span class="syntax-key">"accessibility"</span>: <span class="syntax-string">"passed"</span>
+<span class="line-number">08</span>  <span class="syntax-muted">}</span></code></pre>
+      </div>
+    </section>
+    <section class="metrics-strip" aria-label="System metrics"><div><strong id="token-count">—</strong><span>Semantic tokens</span></div><div><strong id="component-count">—</strong><span>Component recipes</span></div><div><strong id="check-count">—</strong><span>Contrast checks</span></div><div><strong>0</strong><span>Runtime dependencies</span></div></section>
+    <section class="section" id="architecture">
+      <div class="section-heading"><div><p class="eyebrow">Designed as knowledge</p><h2>More than a component library</h2></div><p>Each layer answers a different question, keeping the system easy to reason about, validate, and extend.</p></div>
+      <div class="principle-grid">
+        <article class="principle-card"><span class="card-index">01</span><div class="principle-icon">◇</div><h3>Semantic by default</h3><p>Components consume purpose-driven tokens such as <code>color.action</code>, never disconnected visual values.</p><a href="/catalog/#tokens">Browse tokens →</a></article>
+        <article class="principle-card featured"><span class="card-index">02</span><div class="principle-icon">✓</div><h3>Accessible at the source</h3><p>Contrast, names, keyboard behavior, and focus policy are validated before artifacts are generated.</p><a href="/catalog/#accessibility">See policy →</a></article>
+        <article class="principle-card"><span class="card-index">03</span><div class="principle-icon">⌘</div><h3>Legible to AI</h3><p>One compact manifest exposes intent, anatomy, allowed variants, examples, and constraints.</p><a href="/catalog/#components">View contracts →</a></article>
+      </div>
+    </section>
+    <section class="section layer-section"><div class="section-heading"><div><p class="eyebrow">One-way architecture</p><h2>Nine layers. Clear ownership.</h2></div><p>Dependencies move from durable contracts toward product compositions. The orchestration layer reads everything without leaking back into UI code.</p></div><ol class="layer-list" id="layers"></ol></section>
+    <section class="cta-panel"><p class="eyebrow">See the system in context</p><h2>From design decision<br>to working product.</h2><p>Explore the catalog, then see the same tokens, recipes, and patterns power a focused planning app.</p><div class="hero-actions"><a class="button button-inverse" href="/example/">Launch example app →</a><a class="text-link inverse" href="/catalog/">Read the catalog</a></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">R</span><span>Relay</span></a><p>Design infrastructure for people and machines.</p><p>Built from the system it documents.</p></footer>
+</body>
 </html>
-

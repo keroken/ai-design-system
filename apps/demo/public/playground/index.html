@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate design-system prototypes from product requirements and approved patterns.">
+  <title>Prototype Playground — Relay</title>
+  <link rel="stylesheet" href="/generated/tokens.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/playground/playground.css">
+  <script type="module" src="/playground/playground.js"></script>
+</head>
+<body data-page="playground">
+  <header class="site-header playground-header">
+    <a class="brand" href="/" aria-label="Relay home"><span class="brand-mark" aria-hidden="true">R</span><span>Relay</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="/catalog/">Catalog</a><a href="/example/">Example app</a><a href="/playground/" aria-current="page">Playground</a><a href="/#architecture">Architecture</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button>
+  </header>
+  <main class="playground-main">
+    <header class="playground-intro">
+      <div><p class="eyebrow">Agentic prototype studio</p><h1>Turn product intent<br>into interface direction.</h1></div>
+      <div class="runtime-card"><span class="runtime-light" id="runtime-light"></span><div><strong id="runtime-name">Checking runtime…</strong><small id="runtime-detail">Connecting to the agent service</small></div></div>
+    </header>
+    <div class="studio">
+      <aside class="brief-panel">
+        <form id="prototype-form">
+          <div class="step-heading"><span>01</span><div><h2>Product brief</h2><p>Paste a concise PRD or product concept.</p></div></div>
+          <label for="prd">PRD</label>
+          <textarea id="prd" name="prd" rows="11" maxlength="12000" required>Pulse is a lightweight project tracker for product design teams. Users need to understand project health, create and prioritize tasks, see recent team activity, and spot work that needs attention. The main experience should feel focused and calm, with a clear action for creating a new task.</textarea>
+          <div class="field-meta"><span>Minimum 30 characters</span><span id="character-count">0 / 12,000</span></div>
+          <div class="step-heading pattern-heading"><span>02</span><div><h2>Design patterns</h2><p>Guide the system planner with proven structures.</p></div></div>
+          <fieldset class="pattern-options"><legend class="sr-only">Choose design patterns</legend>
+            <label><input type="checkbox" name="pattern" value="Dashboard" checked><span>▦</span>Dashboard</label>
+            <label><input type="checkbox" name="pattern" value="Form workflow"><span>✎</span>Form workflow</label>
+            <label><input type="checkbox" name="pattern" value="Data table" checked><span>☷</span>Data table</label>
+            <label><input type="checkbox" name="pattern" value="Detail view"><span>◫</span>Detail view</label>
+            <label><input type="checkbox" name="pattern" value="Empty state"><span>○</span>Empty state</label>
+            <label><input type="checkbox" name="pattern" value="Onboarding"><span>→</span>Onboarding</label>
+          </fieldset>
+          <label for="runtime">Generation runtime</label>
+          <select id="runtime" name="mode"><option value="auto">Best available</option><option value="local">Local agents</option><option value="ai" id="ai-option">OpenAI agents</option></select>
+          <button class="button button-primary generate-button" type="submit"><span class="button-spark" aria-hidden="true">✦</span><span>Generate prototype</span><kbd>⌘ ↵</kbd></button>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+        </form>
+      </aside>
+      <section class="output-panel" aria-live="polite">
+        <div class="output-toolbar"><div><span class="canvas-dot"></span><strong>Prototype canvas</strong><span class="generation-mode" id="generation-mode">Ready</span></div><div class="viewport-controls" aria-label="Preview size"><button type="button" data-width="mobile" aria-label="Mobile preview">▯</button><button class="active" type="button" data-width="desktop" aria-label="Desktop preview">▭</button></div></div>
+        <div class="agent-track" id="agent-track" aria-label="Agent progress">
+          <div data-agent="discovery"><span>01</span><strong>Discovery</strong><small>Waiting</small></div>
+          <i></i><div data-agent="system"><span>02</span><strong>System planner</strong><small>Waiting</small></div>
+          <i></i><div data-agent="builder"><span>03</span><strong>Builder</strong><small>Waiting</small></div>
+          <i></i><div data-agent="reviewer"><span>04</span><strong>Accessibility</strong><small>Waiting</small></div>
+        </div>
+        <div class="canvas-wrap"><div class="prototype-frame" id="prototype-frame"><div class="empty-canvas"><div class="empty-orbit"><span>✦</span></div><h2>Your prototype will appear here</h2><p>The agent team will turn your PRD into a constrained interface specification, then render it with Relay components.</p><div><span>PRD</span><i>→</i><span>Patterns</span><i>→</i><span>Prototype</span></div></div></div></div>
+        <aside class="decision-drawer" id="decision-drawer" hidden><div><p class="eyebrow">Agent decisions</p><h2>Why this interface?</h2></div><button type="button" id="close-decisions" aria-label="Close decisions">×</button><ol id="decision-list"></ol></aside>
+      </section>
+    </div>
+  </main>
+</body></html>

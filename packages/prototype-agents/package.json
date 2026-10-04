@@ -1,0 +1,13 @@
+{
+  "name": "@ai-ds/prototype-agents",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": "./src/index.js",
+  "dependencies": {
+    "@ai-ds/accessibility": "0.1.0",
+    "@ai-ds/compositions": "0.1.0",
+    "@ai-ds/patterns": "0.1.0",
+    "@ai-ds/recipes": "0.1.0"
+  },
+  "designSystem": { "layer": 9 }
+}
