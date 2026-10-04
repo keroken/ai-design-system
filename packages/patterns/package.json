@@ -1,0 +1,2 @@
+{"name":"@ai-ds/patterns","version":"0.1.0","type":"module","exports":"./src/index.js","dependencies":{"@ai-ds/primitives":"0.1.0","@ai-ds/recipes":"0.1.0"},"designSystem":{"layer":6}}
+

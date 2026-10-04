@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-ds.local/schemas/token.schema.json",
+  "title": "Design token",
+  "type": "object",
+  "required": ["$type", "$value", "$description"],
+  "properties": {
+    "$type": { "enum": ["color", "dimension", "fontFamily", "fontWeight", "duration", "cubicBezier"] },
+    "$value": { "type": ["string", "number", "array"] },
+    "$description": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false
+}
+

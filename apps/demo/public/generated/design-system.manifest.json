@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 1,
+  "instruction": "Use listed semantic token names and component variants only; change source modules rather than generated files.",
+  "themes": {
+    "light": {
+      "color.canvas": {
+        "$type": "color",
+        "$value": "#f7f8fa",
+        "$description": "Application background",
+        "$source": "{color.neutral.50}"
+      },
+      "color.surface": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Elevated surface",
+        "$source": "{color.neutral.0}"
+      },
+      "color.text": {
+        "$type": "color",
+        "$value": "#111318",
+        "$description": "Primary text",
+        "$source": "{color.neutral.950}"
+      },
+      "color.textMuted": {
+        "$type": "color",
+        "$value": "#303746",
+        "$description": "Secondary text",
+        "$source": "{color.neutral.700}"
+      },
+      "color.border": {
+        "$type": "color",
+        "$value": "#dce0e8",
+        "$description": "Default border",
+        "$source": "{color.neutral.200}"
+      },
+      "color.action": {
+        "$type": "color",
+        "$value": "#4f46e5",
+        "$description": "Interactive fill and emphasis",
+        "$source": "{color.indigo.600}"
+      },
+      "color.actionHover": {
+        "$type": "color",
+        "$value": "#4338ca",
+        "$description": "Hovered action",
+        "$source": "{color.indigo.700}"
+      },
+      "color.onAction": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Content on action fill",
+        "$source": "{color.neutral.0}"
+      },
+      "color.danger": {
+        "$type": "color",
+        "$value": "#be123c",
+        "$description": "Destructive or invalid state",
+        "$source": "{color.red.700}"
+      },
+      "color.focus": {
+        "$type": "color",
+        "$value": "#4f46e5",
+        "$description": "Keyboard focus indicator",
+        "$source": "{color.indigo.600}"
+      },
+      "space.controlX": {
+        "$type": "dimension",
+        "$value": "1rem",
+        "$description": "Horizontal control inset",
+        "$source": "{space.4}"
+      },
+      "space.controlY": {
+        "$type": "dimension",
+        "$value": "0.75rem",
+        "$description": "Vertical control inset",
+        "$source": "{space.3}"
+      },
+      "radius.control": {
+        "$type": "dimension",
+        "$value": "0.75rem",
+        "$description": "Interactive control corners",
+        "$source": "{radius.md}"
+      },
+      "radius.panel": {
+        "$type": "dimension",
+        "$value": "1.25rem",
+        "$description": "Container corners",
+        "$source": "{radius.lg}"
+      },
+      "font.body": {
+        "$type": "fontFamily",
+        "$value": "Inter, ui-sans-serif, system-ui, sans-serif",
+        "$description": "Body typeface",
+        "$source": "{font.sans}"
+      },
+      "weight.control": {
+        "$type": "fontWeight",
+        "$value": 550,
+        "$description": "Interactive label weight",
+        "$source": "{weight.medium}"
+      },
+      "motion.feedback": {
+        "$type": "duration",
+        "$value": "120ms",
+        "$description": "Feedback duration",
+        "$source": "{motion.fast}"
+      }
+    },
+    "dark": {
+      "color.canvas": {
+        "$type": "color",
+        "$value": "#111318",
+        "$description": "Application background",
+        "$source": "{color.neutral.950}"
+      },
+      "color.surface": {
+        "$type": "color",
+        "$value": "#303746",
+        "$description": "Elevated surface",
+        "$source": "{color.neutral.700}"
+      },
+      "color.text": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Primary text",
+        "$source": "{color.neutral.0}"
+      },
+      "color.textMuted": {
+        "$type": "color",
+        "$value": "#dce0e8",
+        "$description": "Secondary text",
+        "$source": "{color.neutral.200}"
+      },
+      "color.border": {
+        "$type": "color",
+        "$value": "#303746",
+        "$description": "Default border",
+        "$source": "{color.neutral.700}"
+      },
+      "color.action": {
+        "$type": "color",
+        "$value": "#818cf8",
+        "$description": "Interactive fill and emphasis",
+        "$source": "{color.indigo.400}"
+      },
+      "color.actionHover": {
+        "$type": "color",
+        "$value": "#818cf8",
+        "$description": "Hovered action",
+        "$source": "{color.indigo.400}"
+      },
+      "color.onAction": {
+        "$type": "color",
+        "$value": "#111318",
+        "$description": "Content on action fill",
+        "$source": "{color.neutral.950}"
+      },
+      "color.danger": {
+        "$type": "color",
+        "$value": "#fff1f2",
+        "$description": "Destructive or invalid state",
+        "$source": "{color.red.50}"
+      },
+      "color.focus": {
+        "$type": "color",
+        "$value": "#818cf8",
+        "$description": "Keyboard focus indicator",
+        "$source": "{color.indigo.400}"
+      },
+      "space.controlX": {
+        "$type": "dimension",
+        "$value": "1rem",
+        "$description": "Horizontal control inset",
+        "$source": "{space.4}"
+      },
+      "space.controlY": {
+        "$type": "dimension",
+        "$value": "0.75rem",
+        "$description": "Vertical control inset",
+        "$source": "{space.3}"
+      },
+      "radius.control": {
+        "$type": "dimension",
+        "$value": "0.75rem",
+        "$description": "Interactive control corners",
+        "$source": "{radius.md}"
+      },
+      "radius.panel": {
+        "$type": "dimension",
+        "$value": "1.25rem",
+        "$description": "Container corners",
+        "$source": "{radius.lg}"
+      },
+      "font.body": {
+        "$type": "fontFamily",
+        "$value": "Inter, ui-sans-serif, system-ui, sans-serif",
+        "$description": "Body typeface",
+        "$source": "{font.sans}"
+      },
+      "weight.control": {
+        "$type": "fontWeight",
+        "$value": 550,
+        "$description": "Interactive label weight",
+        "$source": "{weight.medium}"
+      },
+      "motion.feedback": {
+        "$type": "duration",
+        "$value": "120ms",
+        "$description": "Feedback duration",
+        "$source": "{motion.fast}"
+      }
+    }
+  },
+  "tokenDefinitions": {
+    "color.canvas": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.50}",
+        "dark": "{color.neutral.950}"
+      },
+      "$description": "Application background"
+    },
+    "color.surface": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.0}",
+        "dark": "{color.neutral.700}"
+      },
+      "$description": "Elevated surface"
+    },
+    "color.text": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.950}",
+        "dark": "{color.neutral.0}"
+      },
+      "$description": "Primary text"
+    },
+    "color.textMuted": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.700}",
+        "dark": "{color.neutral.200}"
+      },
+      "$description": "Secondary text"
+    },
+    "color.border": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.200}",
+        "dark": "{color.neutral.700}"
+      },
+      "$description": "Default border"
+    },
+    "color.action": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.indigo.600}",
+        "dark": "{color.indigo.400}"
+      },
+      "$description": "Interactive fill and emphasis"
+    },
+    "color.actionHover": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.indigo.700}",
+        "dark": "{color.indigo.400}"
+      },
+      "$description": "Hovered action"
+    },
+    "color.onAction": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.neutral.0}",
+        "dark": "{color.neutral.950}"
+      },
+      "$description": "Content on action fill"
+    },
+    "color.danger": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.red.700}",
+        "dark": "{color.red.50}"
+      },
+      "$description": "Destructive or invalid state"
+    },
+    "color.focus": {
+      "$type": "color",
+      "$value": {
+        "light": "{color.indigo.600}",
+        "dark": "{color.indigo.400}"
+      },
+      "$description": "Keyboard focus indicator"
+    },
+    "space.controlX": {
+      "$type": "dimension",
+      "$value": {
+        "light": "{space.4}",
+        "dark": "{space.4}"
+      },
+      "$description": "Horizontal control inset"
+    },
+    "space.controlY": {
+      "$type": "dimension",
+      "$value": {
+        "light": "{space.3}",
+        "dark": "{space.3}"
+      },
+      "$description": "Vertical control inset"
+    },
+    "radius.control": {
+      "$type": "dimension",
+      "$value": {
+        "light": "{radius.md}",
+        "dark": "{radius.md}"
+      },
+      "$description": "Interactive control corners"
+    },
+    "radius.panel": {
+      "$type": "dimension",
+      "$value": {
+        "light": "{radius.lg}",
+        "dark": "{radius.lg}"
+      },
+      "$description": "Container corners"
+    },
+    "font.body": {
+      "$type": "fontFamily",
+      "$value": {
+        "light": "{font.sans}",
+        "dark": "{font.sans}"
+      },
+      "$description": "Body typeface"
+    },
+    "weight.control": {
+      "$type": "fontWeight",
+      "$value": {
+        "light": "{weight.medium}",
+        "dark": "{weight.medium}"
+      },
+      "$description": "Interactive label weight"
+    },
+    "motion.feedback": {
+      "$type": "duration",
+      "$value": {
+        "light": "{motion.fast}",
+        "dark": "{motion.fast}"
+      },
+      "$description": "Feedback duration"
+    }
+  },
+  "accessibility": {
+    "policy": {
+      "standard": "WCAG 2.2 AA",
+      "contrast": {
+        "normalText": 4.5,
+        "largeText": 3,
+        "nonText": 3
+      },
+      "focus": {
+        "visible": true,
+        "minimumArea": "2px perimeter",
+        "obscured": false
+      },
+      "motion": {
+        "honorReducedMotion": true
+      },
+      "controls": {
+        "minimumTarget": "24px",
+        "accessibleNameRequired": true
+      }
+    },
+    "validation": {
+      "light": [
+        {
+          "foreground": "color.text",
+          "background": "color.canvas",
+          "ratio": 17.49,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "foreground": "color.text",
+          "background": "color.surface",
+          "ratio": 18.58,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "foreground": "color.onAction",
+          "background": "color.action",
+          "ratio": 6.29,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "dark": [
+        {
+          "foreground": "color.text",
+          "background": "color.canvas",
+          "ratio": 18.58,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "foreground": "color.text",
+          "background": "color.surface",
+          "ratio": 11.93,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "foreground": "color.onAction",
+          "background": "color.action",
+          "ratio": 6.23,
+          "required": 4.5,
+          "pass": true
+        }
+      ]
+    }
+  },
+  "primitives": [
+    {
+      "name": "Button",
+      "anatomy": [
+        "root",
+        "leadingIcon",
+        "label",
+        "trailingIcon",
+        "spinner"
+      ],
+      "variants": {
+        "disabled": [
+          false,
+          true
+        ],
+        "loading": [
+          false,
+          true
+        ]
+      },
+      "a11y": {
+        "role": "button",
+        "accessibleName": "required",
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "loadingAnnouncement": "polite"
+      }
+    },
+    {
+      "name": "TextField",
+      "anatomy": [
+        "root",
+        "label",
+        "control",
+        "description",
+        "error"
+      ],
+      "variants": {
+        "invalid": [
+          false,
+          true
+        ],
+        "disabled": [
+          false,
+          true
+        ]
+      },
+      "a11y": {
+        "label": "required",
+        "description": "aria-describedby",
+        "error": "aria-errormessage",
+        "invalid": "aria-invalid"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Button",
+      "base": "button",
+      "tokens": [
+        "color.action",
+        "color.actionHover",
+        "color.onAction",
+        "color.focus",
+        "space.controlX",
+        "space.controlY",
+        "radius.control",
+        "weight.control",
+        "motion.feedback"
+      ],
+      "variants": {
+        "tone": [
+          "primary",
+          "neutral",
+          "danger"
+        ],
+        "size": [
+          "compact",
+          "default"
+        ],
+        "width": [
+          "content",
+          "full"
+        ]
+      },
+      "defaults": {
+        "tone": "primary",
+        "size": "default",
+        "width": "content"
+      },
+      "states": [
+        "hover",
+        "focus-visible",
+        "disabled",
+        "loading"
+      ]
+    },
+    {
+      "name": "TextField",
+      "base": "field",
+      "tokens": [
+        "color.surface",
+        "color.text",
+        "color.textMuted",
+        "color.border",
+        "color.danger",
+        "color.focus",
+        "radius.control"
+      ],
+      "variants": {
+        "invalid": [
+          false,
+          true
+        ]
+      },
+      "defaults": {
+        "invalid": false
+      },
+      "states": [
+        "focus-visible",
+        "disabled",
+        "invalid"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "name": "FormField",
+      "purpose": "Associates a label, control, optional guidance, and validation message.",
+      "slots": [
+        "label",
+        "control",
+        "description",
+        "error"
+      ],
+      "rules": [
+        "Label is always visible",
+        "Description and error have stable ids",
+        "Error does not rely on color alone"
+      ]
+    },
+    {
+      "name": "ActionGroup",
+      "purpose": "Orders a primary action with optional supporting actions.",
+      "slots": [
+        "primary",
+        "secondary"
+      ],
+      "rules": [
+        "One primary action maximum",
+        "Destructive action requires explicit language"
+      ]
+    }
+  ],
+  "compositions": [
+    {
+      "name": "SignIn",
+      "intent": "Authenticate a returning user with a minimal, recoverable flow.",
+      "structure": [
+        {
+          "pattern": "FormField",
+          "id": "email",
+          "input": {
+            "type": "email",
+            "autocomplete": "email"
+          }
+        },
+        {
+          "pattern": "FormField",
+          "id": "password",
+          "input": {
+            "type": "password",
+            "autocomplete": "current-password"
+          }
+        },
+        {
+          "pattern": "ActionGroup",
+          "primary": {
+            "recipe": "Button",
+            "tone": "primary",
+            "width": "full"
+          }
+        }
+      ],
+      "contentRules": [
+        "State the destination in the heading",
+        "Use 'Sign in' consistently",
+        "Keep recovery available before submission"
+      ]
+    }
+  ]
+}

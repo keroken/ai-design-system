@@ -1,0 +1,2 @@
+{"name":"@ai-ds/primitives","version":"0.1.0","type":"module","exports":"./src/index.js","dependencies":{"@ai-ds/contracts":"0.1.0","@ai-ds/accessibility":"0.1.0"},"designSystem":{"layer":4}}
+
