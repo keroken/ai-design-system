@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Generate design-system prototypes from product requirements and approved patterns.">
   <title>Prototype Playground — Relay</title>
-  <link rel="stylesheet" href="/generated/tokens.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/playground/playground.css">
+  <link rel="stylesheet" href="/generated/tokens.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/playground/playground.css"><link rel="stylesheet" href="/playground/builder.css">
   <script type="module" src="/playground/playground.js"></script>
 </head>
 <body data-page="playground">
@@ -48,7 +48,7 @@
           <i></i><div data-agent="builder"><span>03</span><strong>Builder</strong><small>Waiting</small></div>
           <i></i><div data-agent="reviewer"><span>04</span><strong>Accessibility</strong><small>Waiting</small></div>
         </div>
-        <div class="canvas-wrap"><div class="prototype-frame" id="prototype-frame"><div class="empty-canvas"><div class="empty-orbit"><span>✦</span></div><h2>Your prototype will appear here</h2><p>The agent team will turn your PRD into a constrained interface specification, then render it with Relay components.</p><div><span>PRD</span><i>→</i><span>Patterns</span><i>→</i><span>Prototype</span></div></div></div></div>
+        <div class="canvas-wrap"><div class="prototype-frame" id="prototype-frame"><div class="empty-canvas"><div class="empty-orbit"><span>✦</span></div><h2>Your frontend will appear here</h2><p>The builder creates a real React workspace, compiles a production build, and serves the verified result here.</p><div><span>PRD</span><i>→</i><span>Source</span><i>→</i><span>Build</span></div></div></div></div>
         <aside class="decision-drawer" id="decision-drawer" hidden><div><p class="eyebrow">Agent decisions</p><h2>Why this interface?</h2></div><button type="button" id="close-decisions" aria-label="Close decisions">×</button><ol id="decision-list"></ol></aside>
       </section>
     </div>

@@ -1,0 +1,8 @@
+{
+  "name": "@ai-ds/builder-runtime",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": "./src/index.js",
+  "dependencies": { "@ai-ds/prototype-agents": "0.1.0" },
+  "designSystem": { "layer": 10 }
+}

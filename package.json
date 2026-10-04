@@ -3,14 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*", "apps/*"],
-  "engines": { "node": ">=22" },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "generate": "node packages/orchestrator/src/generate.js",
     "validate": "node scripts/validate-architecture.mjs && node packages/orchestrator/src/generate.js --check",
     "test": "node --test",
     "check": "npm run validate && npm test",
     "dev": "npm run generate && node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "vite": "^6.4.3"
   }
 }
-

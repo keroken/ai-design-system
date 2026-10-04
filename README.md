@@ -61,6 +61,12 @@ Set `OPENAI_MODEL` to override the default `gpt-6-luna` model. The Discovery,
 System Planner, and Prototype Builder agents use schema-constrained outputs;
 the Accessibility Reviewer applies deterministic policy checks to every result.
 
+Every playground run now creates an actual React workspace under `.relay/runs`,
+writes application source, performs a Vite production build, streams lifecycle
+events to the Studio, serves the compiled preview, and packages the source as a
+downloadable `.tgz`. The local workspace provider is for development; its API is
+designed to be replaced by an isolated Docker or hosted sandbox provider.
+
 ## Packages
 
 | Layer | Responsibility | Not responsible for |
@@ -75,5 +81,6 @@ the Accessibility Reviewer applies deterministic policy checks to every result.
 | `compositions` | Product-ready assemblies | Token generation |
 | `orchestrator` | Validate, resolve, emit, explain | Runtime UI behavior |
 | `prototype-agents` | Turn PRDs and patterns into reviewed screen specs | Arbitrary executable UI |
+| `builder-runtime` | Create workspaces, build source, stream runs, package artifacts | Product-level orchestration |
 
 See [Architecture](docs/architecture.md) and [AI authoring contract](docs/ai-authoring.md).

@@ -36,6 +36,16 @@ forbids deep relative imports across package boundaries.
 | 7 | compositions | patterns, recipes |
 | 8 | orchestrator | all layers |
 | 9 | prototype-agents | accessibility, recipes, patterns, compositions |
+| 10 | builder-runtime | prototype-agents and versioned application templates |
+
+## Frontend builder runtime
+
+The Phase 1 runtime persists each run under `.relay/runs/<id>`, seeds a versioned
+React template, writes source from the reviewed prototype contract, runs a real
+production build, and exposes the compiled preview and source archive through
+the control-plane server. Run events are streamed over SSE. `BuildRunManager`
+is the local implementation of the future sandbox-provider boundary; production
+must replace host execution with an isolated Docker or hosted environment.
 
 ## Prototype agent pipeline
 
